@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja De Roupas Femininas</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <style>
+        body{
+            transition: background-color 2.5s;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(7, 7, 7);
+            font-size: 20px;
+            text-align: center;
+            padding-top: 70px;
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+        }
+        .container{
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 758px;
+            margin: 25px auto;
+        }
+        button{
+            padding: 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        @media(max-width: 758px){
+            body{ font-size: 28px; padding-top: 50px;}
+            button{ font-size: 16px; padding: 18px;}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="titulo">Bem-vindo(a)!</h1>
+        <p id="frase">Clique no botão abaixo para conhecer nossa loja de roupas.</p>
+        <p id="hora"></p>
+        <p id="data"></p>
+        <button onclick="trocar()" id="botao">Mudar cor</button>
+        <p id="frase"></p>
+    </div>
+    <script>
+            let mensagem;
+
+            if{
+                mensagem = "Vestido verde com bolinhas";
+                frases = ["Esteja sempre na moda!"];
+                imagem = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fsarasiede%2Fvestidos%2F&psig=AOvVaw0q9RL4MFLcj3tl2-HnUv41&ust=1759491163830000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNi3gcG1hZADFQAAAAAdAAAAABAV";
+            }
+
+            else{
+                mensagem = "Vestido verde Claro, elegante";
+                frases = ["Vista-se de sol e mar!"];
+                imagem = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F629800329142295140%2F&psig=AOvVaw0q9RL4MFLcj3tl2-HnUv41&ust=1759491163830000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNi3gcG1hZADFQAAAAAdAAAAABAz";
+            }
+
+            document.body.style.backgroundImage = imagem;
+            
+            document.getElementById("Short").innerHTML ;
+            document.getElementById("Vestidos").innerHTML ;
+            document.getElementById("Blusas").innerHTML ;
+        
+        let frases = [];
+        function trocarFrase(){
+            if(frases.length > 0){
+                const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+                document.getElementById("frase").innerHTML = fraseAleatoria;
+            }
+        }
+        trocar();
+        setInterval(trocar, 1000);
+
+        trocarFrase();
+        setInterval(trocarFrase, 5000);
+    </script>
+</body>
+</html>
