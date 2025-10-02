@@ -1,0 +1,21 @@
+{
+  "name": "Loja De Roupas",
+  "short_name": "Moda",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+        "src": "icon-000.jpg",
+        "sizes": "533x800",
+        "type": "image/jpg"
+    },
+    {
+       "src": "icone-111.jpg",
+       "sizes": "736x907",
+       "type": "image/jpg"
+    }
+  ]
+}
