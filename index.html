@@ -3,86 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja De Roupas Femininas</title>
+    <title>Loja Feminina Estilo</title>\
+    <link rel="icon" href="icon-000.jpg" type="image/jpg">
+    <link rel="icone" href="icone-111.jpg" type="image/jpg">
 
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+
     <style>
-        body{
-            transition: background-color 2.5s;
+        body {
+            transition: background-color 2s;
             font-family: Arial, Helvetica, sans-serif;
-            color: rgb(7, 7, 7);
-            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #020101;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding-top: 70px;
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed; 
         }
-        .container{
-            background: rgba(255, 255, 255, 0.5);
+
+        .container {
+            max-width: 960px;
+            margin: 30px auto;
             padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            max-width: 758px;
-            margin: 25px auto;
+            text-align: center;
         }
-        button{
-            padding: 20px;
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
+
+        h2 {
+            margin-top: 40px;
+            color: #ff1493;
+        }
+
+        .produtos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .produto {
+            width: 250px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .produto img {
+            width: 100%;
+            height: auto;
+        }
+
+        .produto-info {
+            padding: 15px;
+        }
+
+        .produto-info h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .produto-info p {
+            margin: 5px 0;
+        }
+
+        .produto-info button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background-color: #ff1493;
             border: none;
+            color: white;
+            cursor: pointer;
             border-radius: 5px;
+            font-size: 16px;
         }
-        @media(max-width: 758px){
-            body{ font-size: 28px; padding-top: 50px;}
-            button{ font-size: 16px; padding: 18px;}
+
+        #frase {
+            font-size: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff69b4;
+            color: white;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .produtos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .produto {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
 
+    <header>
+        <h1>Loja Feminina Estilo</h1>
+        <p id="frase">Descubra o look perfeito para você!</p>
+    </header>
+
     <div class="container">
-        <h1 id="titulo">Bem-vindo(a)!</h1>
-        <p id="frase">Clique no botão abaixo para conhecer nossa loja de roupas.</p>
-        <p id="hora"></p>
-        <p id="data"></p>
-        <button onclick="trocar()" id="botao">Mudar cor</button>
-        <p id="frase"></p>
+        <h2>Novidades</h2>
+        <div class="produtos">
+            <div class="produto">
+                <img src="" alt="Vestido floral">
+                <div class="produto-info">
+                    <h3>Vestido Floral</h3>
+                    <p>R$ 129,90</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="" alt="Vestido verde claro">
+                <div class="produto-info">
+                    <h3>Vestido verde claro</h3>
+                    <p>R$ 59,90</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2025 Loja Feminina Estilo - Todos os direitos reservados
+    </footer>
+
     <script>
-            let mensagem;
+        const frases = [
+            "Vista-se de você mesma!",
+            "Estilo é uma forma de dizer quem você é.",
+            "Transforme seu look, transforme seu dia.",
+            "Beleza começa com atitude!"
+        ];
 
-            if{
-                mensagem = "Vestido verde com bolinhas";
-                frases = ["Esteja sempre na moda!"];
-                imagem = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fsarasiede%2Fvestidos%2F&psig=AOvVaw0q9RL4MFLcj3tl2-HnUv41&ust=1759491163830000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNi3gcG1hZADFQAAAAAdAAAAABAV";
-            }
+        function trocarFrase() {
+            const aleatoria = frases[Math.floor(Math.random() * frases.length)];
+            document.getElementById("frase").textContent = aleatoria;
+        }
 
-            else{
-                mensagem = "Vestido verde Claro, elegante";
-                frases = ["Vista-se de sol e mar!"];
-                imagem = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F629800329142295140%2F&psig=AOvVaw0q9RL4MFLcj3tl2-HnUv41&ust=1759491163830000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNi3gcG1hZADFQAAAAAdAAAAABAz";
-            }
+        setInterval(trocarFrase, 4000); 
+
+           
 
             document.body.style.backgroundImage = imagem;
-            
-            document.getElementById("Short").innerHTML ;
-            document.getElementById("Vestidos").innerHTML ;
-            document.getElementById("Blusas").innerHTML ;
         
-        let frases = [];
-        function trocarFrase(){
-            if(frases.length > 0){
-                const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
-                document.getElementById("frase").innerHTML = fraseAleatoria;
-            }
-        }
-        trocar();
-        setInterval(trocar, 1000);
 
-        trocarFrase();
-        setInterval(trocarFrase, 5000);
+        ajustarFundo();
+        trocarFrase(); 
     </script>
 </body>
 </html>
+
