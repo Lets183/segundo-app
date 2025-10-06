@@ -9,12 +9,27 @@
   "icons": [
     {
         "src": "icon-000.jpg",
-        "sizes": "533x800",
+        "sizes": "600x726",
         "type": "image/jpg"
     },
     {
        "src": "icone-111.jpg",
-       "sizes": "736x907",
+       "sizes": "600x831",
+       "type": "image/jpg"
+    },
+     {
+       "src": "vermelho.jpg",
+       "sizes": "600x600",
+       "type": "image/jpg"
+    },
+     {
+       "src": "rosa.jpg",
+       "sizes": "600x842",
+       "type": "image/jpg"
+    },
+     {
+       "src": "roxo.jpg",
+       "sizes": "600x889",
        "type": "image/jpg"
     }
   ]
