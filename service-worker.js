@@ -6,7 +6,10 @@ self.addEventListener("install", event => {
         "index.html",
         "manifest.json",
         "icon-000.jpg",
-        "icone-111.jpg"
+        "icone-111.jpg",
+        "vermelho.jpg",
+        "roxo.jpg",
+        "rosa.jpg"
       ]);
     })
   );
